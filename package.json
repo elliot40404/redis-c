@@ -1,0 +1,19 @@
+{
+  "name": "redis-c",
+  "version": "1.0.0",
+  "description": "local redis alternative",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js  --ignore store.json",
+    "test": "nodemon test.js --ignore store.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.10.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
