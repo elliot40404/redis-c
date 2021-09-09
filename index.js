@@ -5,6 +5,11 @@ const store = __dirname + '/store.json';
 
 if (!fs.existsSync(store)) {
     fs.writeFileSync(store, JSON.stringify({ store: [] }, null, 4));
+} else {
+    const data = fs.readFileSync(store);
+    if (data.length === 0) {
+        fs.writeFileSync(store, JSON.stringify({ store: [] }, null, 4));
+    }
 }
 
 const rhas = (key) => {

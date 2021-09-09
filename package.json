@@ -3,17 +3,26 @@
   "version": "1.0.0",
   "description": "local redis alternative",
   "main": "index.js",
+  "preferGlobal": true,
+  "bin": "./index.js",
   "scripts": {
     "dev": "nodemon index.js  --ignore store.json",
-    "test": "nodemon test.js --ignore store.json"
+    "test": "nodemon test.js --ignore store.json",
+    "watch": "tsc --watch index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliot40404/redis-c.git"
+  },
   "dependencies": {
     "dayjs": "^1.10.6"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "@types/node": "^16.7.13",
+    "nodemon": "^2.0.12",
+    "typescript": "^4.4.2"
   }
 }
